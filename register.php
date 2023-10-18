@@ -5,7 +5,7 @@ if(!isset($_POST['username']) && !isset($_POST['email']) && !isset($_POST['passw
     exit;
 }
 
-require_once 'sql_config.php';
+require_once 'sql-config.php';
 
 $max_email_length = 254;
 $max_username_length = 150;
