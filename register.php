@@ -5,7 +5,9 @@ if(!isset($_POST['username']) && !isset($_POST['email']) && !isset($_POST['passw
     exit;
 }
 
-require_once 'sql-config.php';
+//echo 'test'; // for debugging
+require_once 'sql-config.php'; // <-- the problem child
+//echo '2test2'; // for debugging
 
 $max_email_length = 254;
 $max_username_length = 150;
@@ -86,7 +88,7 @@ else {
 if(empty(trim($_POST['password']))) {
     $password_error = "Password can not be empty";
 }
-else if(strlen(trim($_POST["password"])) > $min_password_length) {
+else if(strlen(trim($_POST["password"])) < $min_password_length) {
     $password_error = "Password must be longer than " . $min_password_length . " characters";
 }
 else if(strlen(trim($_POST['passowrd'] > $max_password_length))) {

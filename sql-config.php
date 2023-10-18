@@ -1,6 +1,6 @@
 <?php
 
-define('DB_SERVER', 'https://mysql.cvcc-bpa.com');
+define('DB_SERVER', 'mysql.cvcc-bpa.com');
 define('DB_USERNAME', 'cvccsqladmin');
 define('DB_PASSWORD', 'Cvcc$ql@dmin');
 define('DB_NAME', 'cvccmysqldb');
