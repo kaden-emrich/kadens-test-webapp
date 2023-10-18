@@ -42,6 +42,11 @@ else {
                 $email = strtolower(trim($_POST["email"]));
             }
         }
+        else {
+            echo "Something went wrong. Please try again later.";
+        }
+
+        mysqli_stmt_close($stmt);
     }
 }
 
@@ -104,7 +109,7 @@ else {
 }
 
 // return to register screen if there are any errors
-if(!empty($username_error) || !empty($password_error) || !empty($confirm_password_error)) {
+if(!empty($username_error) || !empty($email_error) || !empty($password_error) || !empty($confirm_password_error)) {
     mysqli_close($db_link);
     require 'register.html.php';
     exit;
