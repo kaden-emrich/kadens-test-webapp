@@ -1,6 +1,6 @@
 <?php
 
-if(!isset($_POST['username']) && !isset($_POST['password']) && !isset($_POST['confirm_password'])) {
+if(!isset($_POST['username']) && !isset($_POST['email']) && !isset($_POST['password']) && !isset($_POST['confirm_password'])) {
     require 'register.html.php';
     exit;
 }
@@ -23,7 +23,7 @@ else if(strlen(trim($_POST['email'])) > $max_email_length) {
     $email_error = "Email can not me longer than " . $max_email_length . " characters";
 }
 else if (!filter_var(trim($_POST['email']), FILTER_VALIDATE_EMAIL)) { // confirms email is in a valid format
-    $emailErr = "Invalid email format";
+    $email_error = "Invalid email format";
 }
 else {
     $sql = "SELECT email FROM kadens_test_webapp_users WHERE email = ?";
