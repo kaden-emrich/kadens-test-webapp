@@ -25,7 +25,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION['loggedin'] !== true) {
     <h1>Kaden's Test Webapp</h1>
     <h2><?php echo "Welcome " . $_SESSION['username'] . "!"; ?></h2>
 
-    <p><?php echo "Hello world! Part 2"; ?></p>
+    <a href="logout.php"><button>logout</button></a>
+
+    <a href="the-button"><p>Click a button</p></a>
     
 </body>
 

@@ -19,6 +19,7 @@
 
         <div class="form-group">
 
+            <label>Username</label><br>
             <input type="text" name="username">
             <?php 
 
